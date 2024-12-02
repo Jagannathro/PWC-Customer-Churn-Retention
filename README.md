@@ -84,7 +84,7 @@ Shows visualizations from Customer Retention analysis:
 
 | Customer Churn |
 | ----------- |
-|[(https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d1.png)]|
+|(https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d1.png)|
 
 | Customer Risk |
 | ----------- |
