@@ -1,106 +1,132 @@
-# Customer Churn Pattern Analysis 
+# PWC Power BI Virtual work experience - Customer Churn Retention
 
-![GitHub repo size](https://img.shields.io/github/repo-size/aryakghosal/customer-churn-analysis-PwC?logo=github) ![GitHub last commit](https://custom-icon-badges.demolab.com/github/last-commit/aryakghosal/customer-churn-analysis-PwC?logo=history&logoColor=white) ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?logo=github) 
+![PwC Power BI Virtual Case Experience](https://user-images.githubusercontent.com/118357991/227788348-b988c4df-7923-46d6-8af7-102b8042f721.png)
 
-![Banner](Images/customer-churn-analysis-cover.png)
+## Table of Contents:
 
-## Contents
+- [Problem Statement](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#problem-statement-)
+- [Datasource](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#datasource-)
+- [Data Preparation](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#data-preparation)
+- [Data Modeling](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#data-modeling)
+- [Data Analysis (DAX)](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#data-analysis-dax)
+- [Data Visualization (Dashboard)](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#data-visualization-dashboard)
+- [Insights](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#insights)
+- [Recommendation](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#recommendation)
 
-- [Description](#description)
-- [Project Details](#project-details)
-- [Data Collection](#data-collection)
-- [Skills](#skills)
-- [Tech Stack](#tech-stack)
-- [Insights](#insights)
-- [Recommendations](#recommendations)
-- [Dashboard](#dashboard)
-- [Conclusion](#conclusion)
+## Problem Statement :
 
-## Description
-As part of the PwC Power BI in Data Analytics Virtual Case Experience, I analyzed a customer churn dataset for a telecom client of PwC Switzerland. Through exploratory data analysis, I uncovered insights into the customer churn patterns, which I then visualized in a Power BI dashboard report. The report provided a clear and interactive way to communicate my findings, helping the client to better understand their customer behavior and make informed decisions to improve customer retention.
+The purpose of this task is to:
 
-## Project Details
+- Define proper KPI's
+- Create a dashboard for the retention manager reflecting the KPI's
+- Write a short email to him (the engagement partner) explaining your findings, and include suggestions as to what needs to be changed
+- Customers who left within the last month
+- Services each customer has signed up for: phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
+- Customer account information: how long as a customer, contract, payment method, paperless billing, monthly charges, total charges and number of tickets opened in the categories administrative and technical
+- Demographic info about customers – gender, age range, and if they have partners and dependents
 
-*What is Churn?* \
-Churn refers to the rate at which customers stop doing business with a company or service, typically expressed as a percentage of the customer base. 
+## Datasource :
 
-*What is a Churn Rate?* \
-Churn Rate, sometimes known as attrition rate, is the rate at which customers stop doing business with a company over a given period of time. Churn may also apply to the number of subscribers who cancel or don’t renew a subscription. The higher your churn rate, the more customers stop buying from your business. The lower your churn rate, the more customers you retain. Typically, the lower your churn rate, the better.
+Dataset used for this task was presented by [Pwc](https://www.pwc.ch/en/careers-with-pwc/students/virtual-case-experience.html) and customer churn Retention dataset:
 
-> *Churn Rate* = (Churned Customers / Total Number of Customers) x 100%
+Dataset: [Customer Churn Retention](https://github.com/yogeshkasar778/PWC_task_2---Customer_Churn_Retension_dashboard/blob/main/02%20Churn-Dataset.xlsx)
 
-*What is Customer Churn?* \
-Customer Churn refers to the natural business cycle of losing and acquiring customers. 
-Every company — no matter the quality of its products or customer service experiences churn. In the context of businesses, customer churn can occur due to factors such as dissatisfaction with the product or service, competitive offerings, or changes in circumstances or preferences of the customer.
-Generally speaking, the less churn a company has, the more customers they keep.
+## Data Preparation:
 
+Completed the Data transformation in Power Query and the dataset loaded into Microsoft Power BI Desktop for modeling.
 
-## Data Collection
+Customer Churn dataset is give table named:
 
-The dataset was provided as an excel file by PwC from a telecom client during PwC Power BI in Data Analytics Virtual Case Experience, which contained 7000+ records of customer information consisting major fields like Gender, Senior Citizen, Tenure, Payment Method, Phone Service, Contract, Monthly Charge, Subscriptions, etc. \
-*Link:* [Dataset](02-Churn-Dataset.xlsx)
+- Customer churn dataset which has 23 columns and 7043 rows of observation
 
+Data Cleaning for the dataset was done in the power query editor as follows:
 
-## Skills
-- Data Cleaning 
-- Data Inspection 
-- Data Transformation 
-- Data Standardization 
-- Data Visualization 
+- Replaced  the value is SeniorCitizen N coverted No and Y converted Yes
 
-> *Data Inspection:* Visually inspecting the data to identify errors, inconsistencies, or missing values.
+In the new table, one additional conditional columns were added using M-formula:
 
-> *Data Transformation:* Converting data from one format or structure to another, in order to make it more   suitable for a specific task or analysis.
+- loyalty = SWITCH(TRUE(),'01 Churn-Dataset'[tenure]<=12,"< 1 year",'01 Churn-Dataset'[tenure]<=24,"< 2 years",'01 Churn-Dataset'[tenure]<=36,"< 3 years",'01 Churn-Dataset'[tenure]<=48,"< 4 years", '01 Churn-Dataset'[tenure]<=60,"< 5 years",'01 Churn-Dataset'[tenure]<=72,"< 6 years")
 
-> *Data Standardization:* Converting data into a standard format, such as converting all text to lowercase or standardizing date formats.
+- Removed Unnecessary columns 
+- Removed Unnecessary rows
+- Each of the columns in the table were validated to have the correct data type
 
-## Tech Stack
+## Data Modeling:
 
-- Microsoft Excel 
-- Microsoft SQL Server
-- Microsoft Power BI
+And then dataset was cleaned and transformed, it was ready to the data modeled.
 
+- The customer churn tables as show below:
 
-## Insights
+![Screenshot (39)](https://user-images.githubusercontent.com/118357991/227792100-51216842-8e72-4e48-b740-aab5d2f97541.png)
 
-- Contract type is a key factor for churn.
-- Month-to-month  customers are more likely to churn. 
-- Senior citizens likely to churn.
-- Out of the 56% month-to-month contract customers, 24% of them churned. 
-- Female customers with a month-to-month contract are more likely to churn than male customers with a month-to-month contract.
-- Only 1% of the customers with a two years contract churn.
-- Male customers with one year contract are more likely to churn than female with one year contract.
-- Male customers with two years contract are also more likely to churn than female with two years contract.
-- As tenure increases, the number of churn customers decreases.
-- Customers with manual payment mode are more likely to churn.
-- Out of the 44% customers with fiber optic internet, 18% of them churned. 
+## Data Analysis (DAX):
 
-## Recommendations
+Measures used in  all visualization are:
 
-1. Encourage customers to opt for longer contract durations, such as one or two-year contracts, as these customers are less likely to churn.
+- Average MonthlyCharges = AVERAGE('01 Churn-Dataset'[MonthlyCharges])
 
-2. Provide incentives for customers to switch from month-to-month contracts to longer-term contracts.
+- Average TotalCharges = AVERAGE('01 Churn-Dataset'[TotalCharges])
 
-3. Provide senior citizens with tailored offers and services that address their unique needs and concerns to reduce churn rates.
+- churn count = CALCULATE(COUNT('01 Churn-Dataset'[Churn]), ALLSELECTED('01 Churn-Dataset'[Churn]),'01 Churn-Dataset'[Churn] = "Yes")
 
-4. Focus on retaining female customers with month-to-month contracts, as they appear to be more likely to churn than male customers with the same contract type.
+- churn rate % = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[Churn]), '01 Churn-Dataset'[Churn] = "yes" ), COUNT('01 Churn-Dataset'[Churn]), 0)
 
-5. Offer convenient payment options and automate payment processes to reduce the number of customers who churn due to manual payment mode.
+- Dependent in % = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[Dependents]), '01 Churn-Dataset'[Dependents]="Yes",'01 Churn-Dataset'[Churn]="Yes"), CALCULATE(COUNT('01 Churn-Dataset'[Dependents]),'01 Churn-Dataset'[Churn]="Yes"), 0)
 
-6. Address the reasons behind the churn of customers with fiber optic internet to reduce the high churn rate among this customer segment.
+- Device protection in % = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[DeviceProtection]), '01 Churn-Dataset'[DeviceProtection] ="Yes", '01 Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[DeviceProtection]),'01 Churn-Dataset'[Churn]="Yes"),0)
 
-## Dashboard
+- Online backup in % = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[OnlineBackup]), '01 Churn-Dataset'[OnlineBackup] ="Yes", '01 Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[OnlineBackup]),'01 Churn-Dataset'[Churn]="Yes"),0)
 
-![1. Demographics](Images/1-Demographics.png)
+- Online security in % =DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[OnlineSecurity]), '01 Churn-Dataset'[OnlineSecurity] ="Yes", '01 Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[OnlineSecurity]),'01 Churn-Dataset'[Churn]="Yes"),0)
 
-![2. Payments](Images/2-Payments.png)
+- Partner in % = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[Partner]),'01 Churn-Dataset'[Partner]="Yes",'01 Churn-Dataset'[Churn]="Yes"), CALCULATE(COUNT('01 Churn-Dataset'[Partner]), '01 Churn-Dataset'[Churn]="Yes"), 0)
 
-![3. Services](Images/3-Services.png)
+- Phone service in % =DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[PhoneService]), '01 Churn-Dataset'[PhoneService] ="Yes", '01 Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[PhoneService]),'01 Churn-Dataset'[Churn]="Yes"),0)
 
-![4. Filters](Images/4-Filters.png)
+- SenioCitizen in % = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[SeniorCitizen]),'01 Churn-Dataset'[SeniorCitizen]=1,'01 Churn-Dataset'[Churn]="Yes"), CALCULATE(COUNT('01 Churn-Dataset'[SeniorCitizen]),'01 Churn-Dataset'[Churn]="Yes"), 0)
 
-![5. Q&A](Images/5-Q&A.png)
+- Streaming Movies in % =DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[StreamingMovies]), '01 Churn-Dataset'[StreamingMovies] ="Yes", '01 Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[StreamingMovies]),'01 Churn-Dataset'[Churn]="Yes"),0)
 
-[Link to the Dashboard](https://app.powerbi.com/view?r=eyJrIjoiODg3ZDlhYWYtYWU2OC00NWNiLWExYTMtM2RhYzgxMWZlNjQxIiwidCI6ImFhODMxNTE3LTU2ZTQtNGM4MS1iNTViLTYxZTk1MjQwMGE1MCJ9)
+- Streaming TV in % =DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[StreamingTV]), '01 Churn-Dataset'[StreamingTV] ="Yes", '01 Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[StreamingTV]),'01 Churn-Dataset'[Churn]="Yes"),0)
+
+- Tech Support in % =DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[TechSupport]), '01 Churn-Dataset'[TechSupport] ="Yes", '01 Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('01 Churn-Dataset'[TechSupport]),'01 Churn-Dataset'[Churn]="Yes"),0)
+
+## Data Visualization (Dashboard):
+
+Data visualization for the data analysis (DAX) was done in Microsoft Power BI Desktop:
+
+Dashboard: [View Dashboard](https://www.novypro.com/project/yogeshkasar97-1)
+
+Shows visualizations from Customer Retention analysis:
+
+| Customer Churn |
+| ----------- |
+|![PWC Task 2-Customer Churn Retenstion_page-0002](https://user-images.githubusercontent.com/118357991/229330706-03af1d41-a7e3-4449-8867-55322ecdf371.jpg)|
+
+| Customer Risk |
+| ----------- |
+|![PWC Task 2-Customer Churn Retenstion_page-0003](https://user-images.githubusercontent.com/118357991/229330924-5b82f4ab-8326-41f0-b001-e56eb264d3ba.jpg)|
+
+| Services |
+| ----------- |
+|![PWC Task 2-Customer Churn Retenstion_page-0004](https://user-images.githubusercontent.com/118357991/229330958-68b013f5-d013-4de6-a4f7-6a2500823de0.jpg)|
+
+## Insights:
+
+As shown the data Visualization, It can be deduced that:
+
+- Customers on the Two-Year contract, have been with the company for long, while most of the customers on Month-to-Month contract joined the company.
+- The company is at risk of losing recently joined customers. based on the results from analysis.. if they decided to month-to-month contract.
+- 7043 customers are at the risk of churn. and The churn rate is 27%  and yearly charges is $16.06M charges. and Monthly Charges is $456.12K monthly charges.
+- 2955 tech tickets were opened and 3632 admin tickets were opened.
+- Most of the churned customers  did not sign up for Online Security and tech support and  also did not sign up for Phone Services.
+- It a lot of customers had an issue with Fiber Optic . Up to 42% of the customers churned were using Fiber Optic as their Internet Services.
+
+## Recommendation:
+
+- The Company could try convincing customers to subscribe to One-Year and Two-Year contract. The contract are not favorable to customers  as they tend to pay more monthly.
+- Giving the discount to customers based on the some specific tasks is also good wat retaining them, specially those month-to-month contract.
+- From analysis majority customers who churned did not sigh up for Online Security and Tech Support. These are the important services that customers should customers signup for. The company should educate customers  on the benefits of signing up for these services.
+- Increase sale of 1 and 2 year contract by 5% each and Yearly increase of automatic payments by 5%.
 
 ---
