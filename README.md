@@ -84,6 +84,12 @@ Shows visualizations from Customer Retention analysis:
 
 <p align="center">
     <img src= '[https://github.com/Jagannathro/PWC_Call_Center/blob/main/PWC.png]'
+
+
+| Customer Churn |
+| ----------- |
+|![PWC Task 2-Customer Churn Retenstion_page-0002](https://user-images.githubusercontent.com/118357991/229330706-03af1d41-a7e3-4449-8867-55322ecdf371.jpg)|
+
     
 ## Insights:
 
