@@ -82,10 +82,8 @@ Dashboard: [View Dashboard](https://www.novypro.com/project/yogeshkasar97-1)
 
 Shows visualizations from Customer Retention analysis:
 
-| Summary |
 <p align="center">
-    <img src= '[https://github.com/Jagannathro/PWC_Call_Center/blob/main/PWC.png]'(https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d1.png) height="500"></p>
-
+    <img src= 'https://github.com/Jagannathro/PWC_Call_Center/blob/main/PWC.png' height="500"></p>
     
 ## Insights:
 
