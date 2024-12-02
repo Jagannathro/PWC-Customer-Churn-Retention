@@ -90,7 +90,7 @@ Shows visualizations from Customer Retention analysis:
 | ----------- |
 |![| Customer Churn |
 | ----------- |
-|![PWC Task 2-Customer Churn Retenstion_page-0002](https://user-images.githubusercontent.com/118357991/229330706-03af1d41-a7e3-4449-8867-55322ecdf371.jpg)|
+|![https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d3.png)|
 ](https://user-images.githubusercontent.com/118357991/229330706-03af1d41-a7e3-4449-8867-55322ecdf371.jpg)|
 
     
