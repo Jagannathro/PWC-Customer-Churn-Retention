@@ -83,8 +83,8 @@ Dashboard: [View Dashboard](https://www.novypro.com/project/yogeshkasar97-1)
 Shows visualizations from Customer Retention analysis:
 
 | Customer Churn |
-| ----------- |
-|(https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d1.png)|
+<p align="center">
+      <img src= https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d1.png' height="500"></p>
 
 | Customer Risk |
 | ----------- |
