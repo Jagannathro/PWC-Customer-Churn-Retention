@@ -86,6 +86,8 @@ Shows visualizations from Customer Retention analysis:
 <p align="center">
       <img src= https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d1.png' height="500"></p>
 
+<p align="center">
+    <img src= 'https://github.com/Jagannathro/PWC_Call_Center/blob/main/PWC.png' height="500"></p>
 | Customer Risk |
 | ----------- |
 |[(https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d2.png)]|
