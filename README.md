@@ -1,18 +1,5 @@
 # PWC Power BI Virtual work experience - Customer Churn Retention
 
-![PwC Power BI Virtual Case Experience](https://user-images.githubusercontent.com/118357991/227788348-b988c4df-7923-46d6-8af7-102b8042f721.png)
-
-## Table of Contents:
-
-- [Problem Statement](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#problem-statement-)
-- [Datasource](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#datasource-)
-- [Data Preparation](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#data-preparation)
-- [Data Modeling](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#data-modeling)
-- [Data Analysis (DAX)](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#data-analysis-dax)
-- [Data Visualization (Dashboard)](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#data-visualization-dashboard)
-- [Insights](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#insights)
-- [Recommendation](https://github.com/yogeshkasar778/PWC_task_2-Customer_Churn_Retension_dashboard/edit/main/README.md#recommendation)
-
 ## Problem Statement :
 
 The purpose of this task is to:
@@ -27,9 +14,9 @@ The purpose of this task is to:
 
 ## Datasource :
 
-Dataset used for this task was presented by [Pwc](https://www.pwc.ch/en/careers-with-pwc/students/virtual-case-experience.html) and customer churn Retention dataset:
+Dataset used for this task was presented by https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/Churn-Dataset.xlsx and customer churn Retention dataset:
 
-Dataset: [Customer Churn Retention](https://github.com/yogeshkasar778/PWC_task_2---Customer_Churn_Retension_dashboard/blob/main/02%20Churn-Dataset.xlsx)
+Dataset: https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/Churn-Dataset.xlsx
 
 ## Data Preparation:
 
@@ -54,10 +41,6 @@ In the new table, one additional conditional columns were added using M-formula:
 ## Data Modeling:
 
 And then dataset was cleaned and transformed, it was ready to the data modeled.
-
-- The customer churn tables as show below:
-
-![Screenshot (39)](https://user-images.githubusercontent.com/118357991/227792100-51216842-8e72-4e48-b740-aab5d2f97541.png)
 
 ## Data Analysis (DAX):
 
@@ -101,15 +84,15 @@ Shows visualizations from Customer Retention analysis:
 
 | Customer Churn |
 | ----------- |
-|![PWC Task 2-Customer Churn Retenstion_page-0002](https://user-images.githubusercontent.com/118357991/229330706-03af1d41-a7e3-4449-8867-55322ecdf371.jpg)|
+|![(https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d1.png)]|
 
 | Customer Risk |
 | ----------- |
-|![PWC Task 2-Customer Churn Retenstion_page-0003](https://user-images.githubusercontent.com/118357991/229330924-5b82f4ab-8326-41f0-b001-e56eb264d3ba.jpg)|
+|![(https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d2.png)]|
 
 | Services |
 | ----------- |
-|![PWC Task 2-Customer Churn Retenstion_page-0004](https://user-images.githubusercontent.com/118357991/229330958-68b013f5-d013-4de6-a4f7-6a2500823de0.jpg)|
+|![(https://github.com/Jagannathro/PWC-Customer-Churn-Retention/blob/main/d3.png(]|
 
 ## Insights:
 
